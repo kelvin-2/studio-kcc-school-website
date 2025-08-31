@@ -1,10 +1,10 @@
 export default {
-  name: 'teachingStuff',
+  name: 'teachingStaff',
   title: 'Teachers Picture',
   type: 'document',
   fields: [
     {
-      name: 'teaching staff',
+      name: 'teachingStaff',
       title: 'Teaching  Staff Image',
       type: 'image',
       options: { hotspot: true },
