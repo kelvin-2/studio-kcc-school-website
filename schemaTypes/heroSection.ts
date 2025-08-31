@@ -5,19 +5,26 @@ export default {
   fields: [
     { name: 'title', title: 'Title', type: 'string' },
     { name: 'subtitle', title: 'Subtitle', type: 'text' },
-    { name: 'image', title: 'Image', type: 'image', options: { hotspot: true } },
+    { 
+      name: 'images', 
+      title: 'Images', 
+      type: 'array', 
+      of: [{ type: 'image', options: { hotspot: true } }]
+    },
   ],
   preview: {
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      media: 'image'
+      media: 'images.0' 
     },
-    prepare(selection: { title?: string; subtitle?: string; media?: any }) {
+    prepare(selection) {
       const { title, subtitle, media } = selection
       return {
         title: title || 'Hero Section',
-        subtitle: subtitle ? `${subtitle.substring(0, 60)}${subtitle.length > 60 ? '...' : ''}` : 'No subtitle',
+        subtitle: subtitle 
+          ? `${subtitle.substring(0, 60)}${subtitle.length > 60 ? '...' : ''}` 
+          : 'No subtitle',
         media: media
       }
     }
