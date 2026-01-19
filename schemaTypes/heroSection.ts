@@ -16,7 +16,7 @@ export default {
     select: {
       title: 'title',
       subtitle: 'subtitle',
-      media: 'images.0' 
+      media: 'images.0' // show the first image in preview
     },
     prepare(selection) {
       const { title, subtitle, media } = selection
