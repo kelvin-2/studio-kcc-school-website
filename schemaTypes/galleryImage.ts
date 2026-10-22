@@ -1,4 +1,4 @@
-import {defineType, defineField, type Rule} from 'sanity'
+import {defineType, defineField} from 'sanity'
 
 export default defineType({
   name: 'galleryImage',
@@ -9,7 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: Rule) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -24,7 +24,7 @@ export default defineType({
           description: 'Short description for accessibility',
         }),
       ],
-      validation: (Rule:Rule) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'category',
