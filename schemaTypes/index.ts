@@ -5,6 +5,7 @@ import teachersSection from './teachersSection'
 import missionVision from './missionVision'
 import achievementHighlight from './achievementHighlight'
 import principal from './principal'
+import galleryImage from './galleryImage'
 
 export const schemaTypes = [heroSection,
     boardingTransport,
@@ -12,5 +13,6 @@ export const schemaTypes = [heroSection,
     teachersSection, 
     missionVision,
     achievementHighlight,
-    principal
+    principal,
+    galleryImage
 ]
